@@ -1,49 +1,48 @@
-[gd_scene load_steps=2 format=3 uid="uid://dp1tj3lms5jrl"]
+[gd_scene load_steps=4 format=3 uid="uid://dp1tj3lms5jrl"]
 
 [ext_resource type="Texture2D" uid="uid://bb3yv2o8gls6l" path="res://Media/prototypeGrid.png" id="1_fotqy"]
+[ext_resource type="PackedScene" uid="uid://ooxq6g1bbaf1" path="res://Scenes/EnemyAbstract.tscn" id="2_b1c48"]
+[ext_resource type="PackedScene" uid="uid://tuiuoa23dgh" path="res://Scenes/Player.tscn" id="3_r58dj"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="PrototypeGrid" type="Sprite2D" parent="."]
-scale = Vector2(5, 5)
 texture = ExtResource("1_fotqy")
 
 [node name="PrototypeGrid2" type="Sprite2D" parent="."]
-position = Vector2(5100, 0)
-scale = Vector2(5, 5)
+position = Vector2(1023, 0)
 texture = ExtResource("1_fotqy")
 
 [node name="PrototypeGrid3" type="Sprite2D" parent="."]
-position = Vector2(-5100, 0)
-scale = Vector2(5, 5)
+position = Vector2(-1023, 0)
 texture = ExtResource("1_fotqy")
 
 [node name="PrototypeGrid4" type="Sprite2D" parent="."]
-position = Vector2(0, 5100)
-scale = Vector2(5, 5)
+position = Vector2(0, 1023)
 texture = ExtResource("1_fotqy")
 
 [node name="PrototypeGrid5" type="Sprite2D" parent="."]
-position = Vector2(5100, 5100)
-scale = Vector2(5, 5)
+position = Vector2(1023, 1023)
 texture = ExtResource("1_fotqy")
 
 [node name="PrototypeGrid6" type="Sprite2D" parent="."]
-position = Vector2(-5100, 5100)
-scale = Vector2(5, 5)
+position = Vector2(-1023, 1023)
 texture = ExtResource("1_fotqy")
 
 [node name="PrototypeGrid7" type="Sprite2D" parent="."]
-position = Vector2(0, -5100)
-scale = Vector2(5, 5)
+position = Vector2(0, -1023)
 texture = ExtResource("1_fotqy")
 
 [node name="PrototypeGrid8" type="Sprite2D" parent="."]
-position = Vector2(5100, -5100)
-scale = Vector2(5, 5)
+position = Vector2(1023, -1023)
 texture = ExtResource("1_fotqy")
 
 [node name="PrototypeGrid9" type="Sprite2D" parent="."]
-position = Vector2(-5100, -5100)
-scale = Vector2(5, 5)
+position = Vector2(-1023, -1023)
 texture = ExtResource("1_fotqy")
+
+[node name="AbstactEnemy" parent="." instance=ExtResource("2_b1c48")]
+
+[node name="Player" parent="." instance=ExtResource("3_r58dj")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]

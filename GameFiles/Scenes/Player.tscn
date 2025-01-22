@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://tuiuoa23dgh"]
+
+[ext_resource type="Texture2D" uid="uid://b1jpqggiqeit5" path="res://Media/minecraftSword.png" id="1_4kgha"]
+
+[node name="Player" type="Node2D"]
+
+[node name="MinecraftSword" type="Sprite2D" parent="."]
+position = Vector2(35, 0)
+rotation = 2.35619
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("1_4kgha")
