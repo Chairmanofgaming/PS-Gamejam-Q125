@@ -43,6 +43,7 @@ texture = ExtResource("1_fotqy")
 
 [node name="AbstactEnemy" parent="." instance=ExtResource("2_b1c48")]
 
-[node name="Player" parent="." instance=ExtResource("3_r58dj")]
+[node name="Player" parent="." node_paths=PackedStringArray("host") instance=ExtResource("3_r58dj")]
+host = NodePath("../AbstactEnemy")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
