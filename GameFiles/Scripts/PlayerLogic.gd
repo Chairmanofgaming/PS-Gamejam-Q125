@@ -65,12 +65,14 @@ func swing() -> void: # playes the swing sword animation when the attack button 
 		animator.play("WeaponSwing")
 
 func swapNewHost(newHost: Enemy) -> void: # swaps to new host
+	animator.stop()
+	animator.speed_scale = 1
 	host = newHost
 	sprite.position.x = 50
 	speenCollider.disabled = true
 
-func _on_body_entered(body: Enemy):
-	if host:
-		print("hit swing")
+func _on_body_entered(body: Enemy): # collision detection
+	if host: # you can only hit with a swing if you have a host
+		print("hit")
 	else:
-		print("hit speen")
+		call_deferred("swapNewHost", body)
