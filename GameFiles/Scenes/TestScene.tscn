@@ -6,44 +6,50 @@
 
 [node name="Node2D" type="Node2D"]
 
-[node name="PrototypeGrid" type="Sprite2D" parent="."]
-texture = ExtResource("1_fotqy")
-
-[node name="PrototypeGrid2" type="Sprite2D" parent="."]
-position = Vector2(1023, 0)
-texture = ExtResource("1_fotqy")
-
-[node name="PrototypeGrid3" type="Sprite2D" parent="."]
-position = Vector2(-1023, 0)
-texture = ExtResource("1_fotqy")
-
-[node name="PrototypeGrid4" type="Sprite2D" parent="."]
-position = Vector2(0, 1023)
-texture = ExtResource("1_fotqy")
-
-[node name="PrototypeGrid5" type="Sprite2D" parent="."]
-position = Vector2(1023, 1023)
-texture = ExtResource("1_fotqy")
-
-[node name="PrototypeGrid6" type="Sprite2D" parent="."]
-position = Vector2(-1023, 1023)
-texture = ExtResource("1_fotqy")
-
-[node name="PrototypeGrid7" type="Sprite2D" parent="."]
-position = Vector2(0, -1023)
-texture = ExtResource("1_fotqy")
-
-[node name="PrototypeGrid8" type="Sprite2D" parent="."]
-position = Vector2(1023, -1023)
-texture = ExtResource("1_fotqy")
-
-[node name="PrototypeGrid9" type="Sprite2D" parent="."]
-position = Vector2(-1023, -1023)
-texture = ExtResource("1_fotqy")
-
 [node name="AbstactEnemy" parent="." instance=ExtResource("2_b1c48")]
 
 [node name="Player" parent="." node_paths=PackedStringArray("host") instance=ExtResource("3_r58dj")]
 host = NodePath("../AbstactEnemy")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position_smoothing_speed = 10000.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="Map" type="Node2D" parent="."]
+z_index = -5
+
+[node name="PrototypeGrid" type="Sprite2D" parent="Map"]
+texture = ExtResource("1_fotqy")
+
+[node name="PrototypeGrid2" type="Sprite2D" parent="Map"]
+position = Vector2(1023, 0)
+texture = ExtResource("1_fotqy")
+
+[node name="PrototypeGrid3" type="Sprite2D" parent="Map"]
+position = Vector2(-1023, 0)
+texture = ExtResource("1_fotqy")
+
+[node name="PrototypeGrid4" type="Sprite2D" parent="Map"]
+position = Vector2(0, 1023)
+texture = ExtResource("1_fotqy")
+
+[node name="PrototypeGrid5" type="Sprite2D" parent="Map"]
+position = Vector2(1023, 1023)
+texture = ExtResource("1_fotqy")
+
+[node name="PrototypeGrid6" type="Sprite2D" parent="Map"]
+position = Vector2(-1023, 1023)
+texture = ExtResource("1_fotqy")
+
+[node name="PrototypeGrid7" type="Sprite2D" parent="Map"]
+position = Vector2(0, -1023)
+texture = ExtResource("1_fotqy")
+
+[node name="PrototypeGrid8" type="Sprite2D" parent="Map"]
+position = Vector2(1023, -1023)
+texture = ExtResource("1_fotqy")
+
+[node name="PrototypeGrid9" type="Sprite2D" parent="Map"]
+position = Vector2(-1023, -1023)
+texture = ExtResource("1_fotqy")
