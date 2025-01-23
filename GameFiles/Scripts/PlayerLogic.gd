@@ -29,7 +29,7 @@ func _process(delta) -> void:
 func _physics_process(delta) -> void:
 	if host:
 		speenCollider.disabled = true
-		moveHost(delta)
+		host.moveHost(delta)
 		swing()
 		throwSelf()
 		faceInDirection()
@@ -43,14 +43,6 @@ func faceInDirection() -> void: # faces the sword in the direction of the mouse 
 	if !isSwinging and newDirection != Vector2.ZERO: # in case the last direction is 0, ignore it
 		forwardDirection = newDirection
 		forwardRadians = atan2(newDirection.y, newDirection.x) # rotating
-
-func moveHost(delta: float) -> void: # moves the host instead of the player node
-	var moveDirection: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	if moveDirection != Vector2.ZERO: # accelerate (rate is max speed x 4)
-		host.velocity = host.velocity.move_toward(moveDirection*host.maxSpeed, host.maxSpeed*delta*4)
-	else: # decelerate at a faster rate
-		host.velocity = host.velocity.move_toward(Vector2.ZERO, host.maxSpeed*delta*8)
-	host.move_and_slide()
 
 func throwSelf() -> void: # throws self in the current looking direction
 	if Input.is_action_just_pressed("throw"):
