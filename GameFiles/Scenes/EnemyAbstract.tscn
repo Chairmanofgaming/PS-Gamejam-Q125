@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ooxq6g1bbaf1"]
+
+[ext_resource type="Texture2D" uid="uid://b5mwrwwfbjsgc" path="res://Media/randomSkull.png" id="1_i77ak"]
+[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_lvp17"]
+
+[node name="AbstactEnemy" type="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
+script = ExtResource("1_lvp17")
+
+[node name="RandomSkull" type="Sprite2D" parent="."]
+texture = ExtResource("1_i77ak")

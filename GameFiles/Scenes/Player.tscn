@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://tuiuoa23dgh"]
+
+[ext_resource type="Texture2D" uid="uid://b1jpqggiqeit5" path="res://Media/minecraftSword.png" id="1_0yfbu"]
+[ext_resource type="Script" path="res://Scripts/PlayerLogic.gd" id="1_3x2fb"]
+
+[node name="Player" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_3x2fb")
+
+[node name="MinecraftSword" type="Sprite2D" parent="."]
+position = Vector2(30, 0)
+rotation = 2.35619
+scale = Vector2(0.025, 0.025)
+texture = ExtResource("1_0yfbu")
