@@ -8,14 +8,6 @@
 
 [node name="AbstactEnemy" parent="." instance=ExtResource("2_b1c48")]
 
-[node name="Player" parent="." node_paths=PackedStringArray("host") instance=ExtResource("3_r58dj")]
-host = NodePath("../AbstactEnemy")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position_smoothing_speed = 10000.0
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-
 [node name="Map" type="Node2D" parent="."]
 z_index = -5
 
@@ -53,3 +45,26 @@ texture = ExtResource("1_fotqy")
 [node name="PrototypeGrid9" type="Sprite2D" parent="Map"]
 position = Vector2(-1023, -1023)
 texture = ExtResource("1_fotqy")
+
+[node name="AbstactEnemy2" parent="." instance=ExtResource("2_b1c48")]
+position = Vector2(212, -22)
+
+[node name="Player" parent="." node_paths=PackedStringArray("host") instance=ExtResource("3_r58dj")]
+host = NodePath("../AbstactEnemy")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="EnemyAbstract" parent="." instance=ExtResource("2_b1c48")]
+position = Vector2(-82, -77)
+
+[node name="EnemyAbstract2" parent="." instance=ExtResource("2_b1c48")]
+position = Vector2(-314, 154)
+
+[node name="EnemyAbstract3" parent="." instance=ExtResource("2_b1c48")]
+position = Vector2(-107, -232)
+
+[node name="EnemyAbstract4" parent="." instance=ExtResource("2_b1c48")]
+position = Vector2(354, 178)
+
+[node name="EnemyAbstract5" parent="." instance=ExtResource("2_b1c48")]
+position = Vector2(376, -222)
