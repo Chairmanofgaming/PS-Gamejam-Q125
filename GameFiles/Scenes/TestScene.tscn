@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dp1tj3lms5jrl"]
 
-[ext_resource type="Texture2D" uid="uid://bb3yv2o8gls6l" path="res://Media/prototypeGrid.png" id="1_fotqy"]
+[ext_resource type="Texture2D" uid="uid://dktq7apbieb41" path="res://Media/prototypeGrid.png" id="1_fotqy"]
 [ext_resource type="PackedScene" uid="uid://ooxq6g1bbaf1" path="res://Scenes/EnemyAbstract.tscn" id="2_b1c48"]
-[ext_resource type="PackedScene" uid="uid://tuiuoa23dgh" path="res://Scenes/player.tscn" id="3_r58dj"]
+[ext_resource type="PackedScene" uid="uid://tuiuoa23dgh" path="res://Scenes/Player.tscn" id="3_r58dj"]
 
 [node name="Node2D" type="Node2D"]
 
